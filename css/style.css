@@ -1,0 +1,330 @@
+/* Bootstrap Icons CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.6em;
+  min-height: 100vh;
+  margin: 0;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+/* Google Web Fonts CDN */
+/* ##### Shoe Station - Main Page ##### */
+* {
+  font-family: "Noto Sans KR";
+}
+
+/* ########## COMMON ########## */
+.inner {
+  width: 1280px;
+  margin: auto;
+}
+
+.btn_close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+}
+.btn_close::before {
+  position: absolute;
+  content: "\f62a";
+  left: -25px;
+  top: 50%;
+  transform: translateY(calc(-50% + 2px));
+  font-family: "bootstrap-icons";
+  font-size: 25px;
+}
+
+/* ########## Header ########## */
+header .top .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+header .top .inner .logo {
+  width: 150px;
+  height: 83px;
+  transform: translateY(-5px);
+}
+header .top .inner .logo a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+header .top .inner .logo a img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+header .top .inner .search_field {
+  position: relative;
+  width: 400px;
+}
+header .top .inner .search_field input[type=search] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #333333;
+  font-size: 16.5px;
+}
+header .top .inner .search_field .btn_search {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(calc(-50% - 2px));
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #333333;
+}
+header .top .inner .lnb a {
+  position: relative;
+  display: inline-block;
+  color: #555555;
+  font-size: 27.5px;
+  text-align: center;
+  margin-right: 15px;
+  transition: 0.2s;
+}
+header .top .inner .lnb a:nth-child(1) {
+  font-size: 30px;
+}
+header .top .inner .lnb a:nth-child(3) {
+  margin-right: 18px;
+}
+header .top .inner .lnb a:nth-child(4) {
+  transform: translateY(-3px);
+}
+header .top .inner .lnb a:nth-child(3) i::after, header .top .inner .lnb a:nth-child(4) i::after {
+  content: attr(data-links);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translateX(50%);
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 50%;
+  font-style: normal;
+  background-color: #e67e22;
+  font-size: 12px;
+  color: #ffffff;
+}
+header .top .inner .lnb a:nth-child(4) i::after {
+  bottom: -3px;
+}
+header .top .inner .lnb a:hover {
+  color: #999999;
+}
+header .bottom .gnb {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+header .bottom .gnb li .gnb_title {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+header .bottom .gnb li .gnb_title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #e67e22;
+  transition: 0.2s;
+}
+header .bottom .gnb li .gnb_title:hover::after {
+  width: 100%;
+}
+header .bottom .gnb li .gnb_content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  border: 1px solid #dddddd;
+  left: 0;
+  width: 100%;
+  height: 302px;
+  background-color: #ffffff;
+}
+header .bottom .gnb li .gnb_content.active {
+  display: block;
+}
+header .bottom .gnb li .gnb_content .inner {
+  position: relative;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_title {
+  width: 100%;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  font-size: 18px;
+  transition: 0.35s;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li:last-child .tab_title {
+  border-bottom: none;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li.active .tab_title {
+  background-color: #ffffff;
+  color: #e67e22;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_content {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: calc(100% - 200px);
+  height: 100%;
+  display: none;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_content div {
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_content div a {
+  display: block;
+  padding: 8px 0;
+  border-right: 1px solid #dddddd;
+  transition: 0.2s;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_content div a.title {
+  font-weight: 700;
+  padding: 12px 0;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li .tab_content div a:hover {
+  color: #e67e22;
+}
+header .bottom .gnb li .gnb_content .inner .tab_menu li.active .tab_content {
+  display: block;
+}
+header .bottom .gnb li .gnb_content.brand_menu {
+  height: auto;
+  border: none;
+  padding-bottom: 20px;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner {
+  width: 800px;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .brand_menu_title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 25px;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .main_logo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .main_logo .item {
+  width: 100%;
+  height: 100%;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .main_logo .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo .item::after {
+  content: attr(data-links);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo .item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ########## Section - Intro ########## */
+/* ########## Section - Best Seller ########## */
+/* ########## Section - Best Brand ########## */
+/* ########## Section - New ########## */
+/* ########## Section - Magazine ########## */
+/* ########## Section - Insta ########## */
+/* ########## Footer ########## */

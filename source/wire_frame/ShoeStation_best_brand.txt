@@ -1,0 +1,17 @@
+
+
+
+	section.best_brand
+		.inner
+			.best_brand_slider_outer
+				h3.title
+				.best_brand_slider
+					.item
+						.thum
+							img
+							span.desc > b
+						.best_brand_aside
+						.best_brand_aside_slider
+							.item
+								img
+								a

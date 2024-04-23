@@ -1,0 +1,21 @@
+
+
+
+	section.best_seller(section.new)
+		.inner
+			.items_outer
+				h3.title
+				.items
+					.item
+						.thum > img
+						.desc
+							b
+							.name_and_color
+								span
+								em
+							.price_and_sale
+								span
+								em
+								
+								
+	

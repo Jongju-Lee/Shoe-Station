@@ -1,0 +1,26 @@
+
+
+
+	footer
+		.service
+			.service_inner
+				.h2.title
+				.items
+					a.item
+						.icon > ::after(font-icon)
+						span
+		.center
+			.inner
+				.info
+					span.phone
+						b
+						em
+					p.desc
+		.bottom
+			.inner
+				.items
+					.logo > a > img
+					.copyright
+						.links > a
+						span
+						

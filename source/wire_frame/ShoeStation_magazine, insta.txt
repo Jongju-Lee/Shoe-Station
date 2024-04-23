@@ -1,0 +1,25 @@
+
+
+
+	section.magazine
+		.inner
+			.items_outer
+				h3.title
+				.items
+					.item
+						.thum > img
+						.desc
+							b
+							span
+	section.insta
+		.hash_tag
+			a
+				.insta_icon
+				.desc
+					b
+					span
+		.items
+			.thum > a > img * 3
+			
+			
+			
