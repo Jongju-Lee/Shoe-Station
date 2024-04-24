@@ -31,6 +31,10 @@ h6 {
   line-height: 1.2em;
 }
 
+em {
+  font-style: normal;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -44,6 +48,7 @@ body {
   margin: 0;
   color: #333333;
   background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* Google Web Fonts CDN */
@@ -53,6 +58,10 @@ body {
 }
 
 /* ########## COMMON ########## */
+section:not(.intro) {
+  padding: 70px 0;
+}
+
 .inner {
   width: 1280px;
   margin: auto;
@@ -75,6 +84,33 @@ body {
   transform: translateY(calc(-50% + 2px));
   font-family: "bootstrap-icons";
   font-size: 25px;
+}
+
+/* ### Slick.js ### */
+/* Custom Arrow */
+.slick-prev,
+.slick-next {
+  width: 35px;
+  height: 35px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: inline-block;
+  color: #dddddd;
+  font-family: "bootstrap-icons";
+  font-size: 35px;
+  opacity: 1;
+}
+
+.slick-prev:before {
+  content: "\f284";
+  transform: translateX(-10px) translateY(5px);
+}
+
+.slick-next:before {
+  content: "\f285";
+  transform: translateX(10px) translateY(5px);
 }
 
 /* ########## Header ########## */
@@ -322,9 +358,204 @@ header .bottom .gnb li .gnb_content.brand_menu .inner .gray_logo .item:hover::af
 }
 
 /* ########## Section - Intro ########## */
+section.intro .intro_slider .item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section.intro .intro_slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.intro .intro_slider .item .desc {
+  position: absolute;
+  bottom: 70px;
+  left: 50px;
+  color: #ffffff;
+}
+section.intro .intro_slider .item .desc.black {
+  color: #000000;
+}
+section.intro .intro_slider .item .desc h3 {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+section.intro .intro_slider .item .desc span {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 /* ########## Section - Best Seller ########## */
+section.best_seller .inner .wrapper .title {
+  font-size: 30px;
+}
+section.best_seller .inner .wrapper .items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+section.best_seller .inner .wrapper .items .item {
+  display: block;
+  height: 300px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+}
+section.best_seller .inner .wrapper .items .item .thum {
+  width: 100%;
+  height: 70%;
+}
+section.best_seller .inner .wrapper .items .item .thum img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.best_seller .inner .wrapper .items .item .desc {
+  margin-top: 5px;
+}
+section.best_seller .inner .wrapper .items .item .desc b {
+  text-transform: uppercase;
+}
+section.best_seller .inner .wrapper .items .item .desc .name_and_color {
+  margin-top: 3px;
+  font-weight: 500;
+}
+section.best_seller .inner .wrapper .items .item .desc .name_and_color em::before {
+  content: "|";
+  margin-right: 4px;
+}
+section.best_seller .inner .wrapper .items .item .desc .price_and_sale {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 16.5px;
+  margin-top: 3px;
+}
+section.best_seller .inner .wrapper .items .item .desc .price_and_sale em {
+  color: #e67e22;
+}
+section.best_seller .inner .wrapper .items .item .desc .price_and_sale em::after {
+  content: "%";
+}
+
 /* ########## Section - Best Brand ########## */
+section.best_brand .inner .wrapper .title {
+  font-size: 30px;
+}
+section.best_brand .inner .wrapper .content {
+  margin-top: 30px;
+  height: 400px;
+}
+section.best_brand .inner .wrapper .content article {
+  display: inline-block;
+  width: calc(33.3333333333% - 9px);
+  height: inherit;
+}
+section.best_brand .inner .wrapper .content article:not(:last-child) {
+  margin-right: 10px;
+}
+section.best_brand .inner .wrapper .content article .thum {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+section.best_brand .inner .wrapper .content article .thum a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.best_brand .inner .wrapper .content article .thum img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.best_brand .inner .wrapper .content article .thum .desc {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  font-size: 20px;
+  color: #ffffff;
+  pointer-events: none;
+}
+section.best_brand .inner .wrapper .content article .thum .desc b {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+section.best_brand .inner .wrapper .content article aside {
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 20px 40px;
+}
+section.best_brand .inner .wrapper .content article aside .best_brand_sub_slider .item {
+  margin: 0 5px;
+}
+section.best_brand .inner .wrapper .content article aside .best_brand_sub_slider .item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* ########## Section - New ########## */
+section.new {
+  margin-top: 140px;
+}
+section.new .inner .wrapper .title {
+  font-size: 30px;
+}
+section.new .inner .wrapper .items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+section.new .inner .wrapper .items .item {
+  display: block;
+  height: 300px;
+  padding: 20px;
+  border: 1px solid #dddddd;
+}
+section.new .inner .wrapper .items .item .thum {
+  width: 100%;
+  height: 70%;
+}
+section.new .inner .wrapper .items .item .thum img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section.new .inner .wrapper .items .item .desc {
+  margin-top: 5px;
+}
+section.new .inner .wrapper .items .item .desc b {
+  text-transform: uppercase;
+}
+section.new .inner .wrapper .items .item .desc .name_and_color {
+  margin-top: 3px;
+  font-weight: 500;
+}
+section.new .inner .wrapper .items .item .desc .name_and_color em::before {
+  content: "|";
+  margin-right: 4px;
+}
+section.new .inner .wrapper .items .item .desc .price_and_sale {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 16.5px;
+  margin-top: 3px;
+}
+section.new .inner .wrapper .items .item .desc .price_and_sale em {
+  color: #e67e22;
+}
+section.new .inner .wrapper .items .item .desc .price_and_sale em::after {
+  content: "%";
+}
+
 /* ########## Section - Magazine ########## */
 /* ########## Section - Insta ########## */
 /* ########## Footer ########## */

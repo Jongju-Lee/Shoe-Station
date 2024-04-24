@@ -3,15 +3,15 @@
 
 	section.best_brand
 		.inner
-			.best_brand_slider_outer
-				h3.title
-				.best_brand_slider
-					.item
+			.wrapper
+				h2.title
+				.content
+					article
 						.thum
 							img
 							span.desc > b
-						.best_brand_aside
-						.best_brand_aside_slider
-							.item
-								img
-								a
+						aside
+						.best_brand_sub_slider
+							a.item > img
+						
+						

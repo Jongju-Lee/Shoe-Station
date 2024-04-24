@@ -19,3 +19,64 @@
     font-size: map-get($map: $font-size, $key: h2);
   }
 }
+@mixin feature_section {
+  .inner {
+    .wrapper {
+      .title {
+        font-size: map-get($map: $font-size, $key: h2) * 1.2;
+      }
+      .items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+        .item {
+          display: block;
+          height: 300px;
+          padding: 20px;
+          border: 1px solid map-get($map: $font_color, $key: fourth);
+          .thum {
+            width: 100%;
+            height: 70%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .desc {
+            margin-top: 5px;
+            b {
+              text-transform: uppercase;
+            }
+            .name_and_color {
+              margin-top: 3px;
+              font-weight: map-get($map: $font-weight, $key: medium);
+              span {
+              }
+              em {
+                &::before {
+                  content: "|";
+                  margin-right: 4px;
+                }
+              }
+            }
+            .price_and_sale {
+              display: flex;
+              justify-content: space-between;
+              font-weight: map-get($map: $font_weight, $key: bold);
+              font-size: map-get($map: $font-size, $key: body) * 1.1;
+              margin-top: 3px;
+              em {
+                color: map-get($map: $theme_color, $key: primary);
+                &::after {
+                  content: "%";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

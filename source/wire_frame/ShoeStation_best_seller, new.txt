@@ -3,8 +3,8 @@
 
 	section.best_seller(section.new)
 		.inner
-			.items_outer
-				h3.title
+			.wrapper
+				h2.title
 				.items
 					.item
 						.thum > img

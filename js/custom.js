@@ -18,7 +18,8 @@ $(function () {
   $(".btn_close").click(function () {
     $(".gnb_content").removeClass("active");
   });
-  /* ##### Slick.js ##### */
+  /* ########## Slick.js ########## */
+  /* ##### Section - Intro ##### */
   $(".intro_slider").slick({
     dots: true,
     infinite: false,
@@ -39,16 +40,29 @@ $(function () {
         },
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+  /* ##### Section - Best Brand(Sub Slider) ##### */
+  $(".best_brand_sub_slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1,
         },
       },
