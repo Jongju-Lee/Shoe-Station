@@ -1,6 +1,23 @@
 // Import
 @import "variables";
 
+// Mixins
+@mixin logo_property {
+  width: 150px;
+  height: 83px;
+  transform: translateY(-5px);
+  a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    img {
+      display: block;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+}
 @mixin close_button {
   position: absolute;
   top: 10px;
