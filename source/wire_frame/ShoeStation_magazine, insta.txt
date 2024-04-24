@@ -4,7 +4,7 @@
 	section.magazine
 		.inner
 			.items_outer
-				h3.title
+				h2.title
 				.items
 					.item
 						.thum > img
@@ -19,7 +19,8 @@
 					b
 					span
 		.items
-			.thum > a > img * 3
+			.thum
+				a > img
 			
 			
 			

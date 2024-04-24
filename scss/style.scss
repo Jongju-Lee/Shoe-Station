@@ -11,7 +11,7 @@
   font-family: map-get($map: $font_family, $key: primary_kr);
 }
 /* ########## COMMON ########## */
-section:not(.intro) {
+section {
   padding: 70px 0;
 }
 .inner {
@@ -46,6 +46,13 @@ section:not(.intro) {
 }
 /* ########## Header ########## */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: map-get($map: $theme_color, $key: white);
+  box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.1);
   .top {
     .inner {
       display: flex;
@@ -71,12 +78,19 @@ header {
       .search_field {
         position: relative;
         width: 400px;
-        input[type="search"] {
+        input[type="text"] {
           width: 100%;
           height: 40px;
           border: none;
           border-bottom: 1px solid map-get($map: $font_color, $key: primary);
           font-size: map-get($map: $font_size, $key: body) * 1.1;
+          &::placeholder {
+            color: map-get($map: $font_color, $key: third);
+            transition: 0.35s;
+          }
+          &:focus::placeholder {
+            opacity: 0;
+          }
         }
         .btn_search {
           position: absolute;
@@ -142,6 +156,8 @@ header {
       justify-content: center;
       align-items: center;
       height: 60px;
+      // border: 1px solid red;
+      margin-top: -10px;
       li {
         .gnb_title {
           position: relative;
@@ -167,11 +183,11 @@ header {
           display: none;
           position: absolute;
           top: 60px;
-          border: 1px solid map-get($map: $font_color, $key: fourth);
           left: 0;
           width: 100%;
           height: 302px;
           background-color: map-get($map: $theme_color, $key: white);
+          box-shadow: 0 10px 15px rgba($color: #000000, $alpha: 0.1);
           &.active {
             display: block;
           }
@@ -206,6 +222,8 @@ header {
                   width: calc(100% - 200px);
                   height: 100%;
                   display: none;
+                  border: 1px solid map-get($map: $font_color, $key: fourth);
+                  border-bottom: none;
                   div {
                     float: left;
                     width: 200px;
@@ -305,6 +323,7 @@ header {
 }
 /* ########## Section - Intro ########## */
 section.intro {
+  padding-top: 180px;
   .intro_slider {
     .item {
       position: relative;
@@ -338,75 +357,15 @@ section.intro {
 /* ########## Section - Best Seller ########## */
 section.best_seller {
   @include feature_section;
-  // .inner {
-  //   .wrapper {
-  //     .title {
-  //       font-size: map-get($map: $font-size, $key: h2) * 1.2;
-  //     }
-  //     .items {
-  //       display: grid;
-  //       grid-template-columns: repeat(5, 1fr);
-  //       gap: 20px;
-  //       margin-top: 30px;
-  //       .item {
-  //         display: block;
-  //         height: 300px;
-  //         padding: 20px;
-  //         border: 1px solid map-get($map: $font_color, $key: fourth);
-  //         .thum {
-  //           width: 100%;
-  //           height: 70%;
-  //           img {
-  //             width: 100%;
-  //             height: 100%;
-  //             object-fit: cover;
-  //           }
-  //         }
-  //         .desc {
-  //           margin-top: 5px;
-  //           b {
-  //             text-transform: uppercase;
-  //           }
-  //           .name_and_color {
-  //             margin-top: 3px;
-  //             font-weight: map-get($map: $font-weight, $key: medium);
-  //             span {
-  //             }
-  //             em {
-  //               &::before {
-  //                 content: "|";
-  //                 margin-right: 4px;
-  //               }
-  //             }
-  //           }
-  //           .price_and_sale {
-  //             display: flex;
-  //             justify-content: space-between;
-  //             font-weight: map-get($map: $font_weight, $key: bold);
-  //             font-size: map-get($map: $font-size, $key: body) * 1.1;
-  //             margin-top: 3px;
-  //             em {
-  //               color: map-get($map: $theme_color, $key: primary);
-  //               &::after {
-  //                 content: "%";
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }
 /* ########## Section - Best Brand ########## */
 section.best_brand {
   .inner {
     .wrapper {
       .title {
-        font-size: map-get($map: $font-size, $key: h2) * 1.2;
+        @include title_property;
       }
       .content {
-        margin-top: 30px;
         height: 400px;
         article {
           display: inline-block;
@@ -472,5 +431,241 @@ section.new {
   @include feature_section;
 }
 /* ########## Section - Magazine ########## */
+section.magazine {
+  .inner {
+    .magazine_slider_outer {
+      .title {
+        @include title_property;
+        font-weight: map-get($map: $font_weight, $key: extra_bold);
+      }
+      .magazine_slider {
+        .item {
+          position: relative;
+          a {
+            border: 1px solid white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+          .thum {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: 0.2s;
+            }
+          }
+          .desc {
+            margin-top: 10px;
+            padding-left: 5px;
+            b {
+              display: block;
+              margin-bottom: 10px;
+              font-size: map-get($map: $font-size, $key: h3) * 1.1;
+            }
+            span {
+              font-size: map-get($map: $font-size, $key: h3);
+            }
+          }
+        }
+        /* Custom Slick SCSS */
+        .slick-list {
+          margin-right: -20px;
+        }
+        .slick-slide {
+          margin-right: 20px;
+        }
+        .slick-prev,
+        .slick-next {
+          width: 50px;
+          height: 50px;
+        }
+        .slick-prev:before,
+        .slick-next:before {
+          color: map-get($map: $font_color, $key: third);
+          font-size: 50px;
+        }
+        .slick-prev:before {
+          content: "\F284";
+          transform: translateX(-30px) translateY(-25px);
+        }
+        .slick-next:before {
+          content: "\F285";
+          transform: translateX(30px) translateY(-25px);
+        }
+      }
+    }
+  }
+}
 /* ########## Section - Insta ########## */
+section.insta {
+  .items {
+    display: flex;
+    padding: 0 30px;
+    gap: 20px;
+    height: 100%;
+    .thum {
+      flex: 1;
+      height: 100%;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &.hash_tag {
+        a {
+          padding: 30px 0;
+          .insta_icon {
+            width: 70px;
+            height: 70px;
+          }
+          .desc {
+            margin-top: 20px;
+            b {
+              display: block;
+              font-size: map-get($map: $font-size, $key: h2) * 1.2;
+              font-weight: map-get($map: $font_weight, $key: extra_bold);
+              line-height: 1.2em;
+              letter-spacing: 1px;
+              margin-bottom: 20px;
+            }
+            span {
+              display: block;
+              margin-top: 5px;
+              font-size: map-get($map: $font-size, $key: h3);
+              letter-spacing: 1px;
+              color: map-get($map: $font_color, $key: third);
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /* ########## Footer ########## */
+footer {
+  background-color: map-get($map: $theme_color, $key: snow);
+  .service {
+    .service_inner {
+      width: 1000px;
+      margin: auto;
+      padding: 30px 0;
+      text-align: center;
+      border: 1px solid #000;
+      .title {
+        text-transform: uppercase;
+        font-size: map-get($map: $font-size, $key: h2);
+        font-weight: map-get($map: $font_weight, $key: extra_bold);
+        letter-spacing: 5px;
+        span {
+          display: block;
+        }
+      }
+      .items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        .item {
+          .icon {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: map-get($map: $theme_color, $key: white);
+            border-radius: 50%;
+            margin-bottom: 15px;
+            &::after {
+              font-family: "bootstrap-icons";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              line-height: 100px;
+              font-size: map-get($map: $font-size, $key: h1) * 1.2;
+            }
+          }
+          &:nth-child(1) .icon::after {
+            content: "\F3EC";
+          }
+          &:nth-child(2) .icon::after {
+            content: "\F3E8";
+          }
+          &:nth-child(3) .icon::after {
+            content: "\F18A";
+          }
+          &:nth-child(4) .icon::after {
+            content: "\F25F";
+          }
+          span {
+            font-size: map-get($map: $font-size, $key: body) * 1.2;
+            font-weight: map-get($map: $font_weight, $key: bold);
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+  }
+  .center {
+    background-color: map-get($map: $theme_color, $key: cloudy);
+    .inner {
+      padding: 30px 0;
+      .info {
+        .phone {
+          span {
+            letter-spacing: 5px;
+            font-size: map-get($map: $font-size, $key: h2);
+          }
+          em {
+            margin-left: 10px;
+            letter-spacing: 3px;
+            font-size: map-get($map: $font-size, $key: h3);
+            color: map-get($map: $theme_color, $key: primary);
+            font-weight: map-get($map: $font_weight, $key: extra_bold);
+          }
+          .desc {
+            margin-top: 10px;
+            line-height: 1.5em;
+            font-size: map-get($map: $font-size, $key: body) * 0.9;
+            color: map-get($map: $font_color, $key: secondary);
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    .inner {
+      .items {
+        display: flex;
+        .logo {
+          border: 1px solid #000;
+          width: 150px;
+          a {
+            img {
+            }
+          }
+        }
+        .copyright {
+          .links {
+            a {
+            }
+          }
+          span {
+          }
+        }
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@ $(function () {
     $(".gnb_content").removeClass("active");
   });
   /* ########## Slick.js ########## */
-  /* ##### Section - Intro ##### */
+  /* ##### Section - Intro(Banner Slider) ##### */
   $(".intro_slider").slick({
     dots: true,
     infinite: false,
@@ -63,6 +63,28 @@ $(function () {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+  /* ##### Section - Magazine(Magazine Slider) ##### */
+  $(".magazine_slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },

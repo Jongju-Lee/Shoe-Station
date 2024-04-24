@@ -19,17 +19,20 @@
     font-size: map-get($map: $font-size, $key: h2);
   }
 }
+@mixin title_property {
+  font-size: map-get($map: $font-size, $key: h2) * 1.2;
+  margin-bottom: 30px;
+}
 @mixin feature_section {
   .inner {
     .wrapper {
       .title {
-        font-size: map-get($map: $font-size, $key: h2) * 1.2;
+        @include title_property;
       }
       .items {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;
-        margin-top: 30px;
         .item {
           display: block;
           height: 300px;
