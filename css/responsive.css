@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Google Web Fonts CDN */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
 /* Google Web Fonts CDN */
@@ -227,4 +228,7 @@ body {
   section.intro .intro_slider .item .desc span {
     font-size: 18px;
   }
+  /* ########## Section - Best Seller, New ########## */
+  /* Mixins 안에 mediaQuery로 반응형 하였음. */
+  /* ########## Section - Best Brand ########## */
 }

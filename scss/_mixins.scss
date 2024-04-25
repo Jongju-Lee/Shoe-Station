@@ -94,8 +94,6 @@
             .name_and_color {
               margin-top: 3px;
               font-weight: map-get($map: $font-weight, $key: medium);
-              span {
-              }
               em {
                 &::before {
                   content: "|";
@@ -123,6 +121,25 @@
         }
         .slick-slide {
           margin-right: 20px;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .inner {
+      width: 100%;
+      padding: 0 20px;
+      .wrapper {
+        .items {
+          .item {
+            height: auto;
+            .desc {
+              margin-top: 10px;
+              .name_and_color {
+                height: 50px;
+              }
+            }
+          }
         }
       }
     }

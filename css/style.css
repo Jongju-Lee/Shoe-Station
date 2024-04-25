@@ -581,6 +581,21 @@ section.best_seller .inner .wrapper .items .slick-list {
 section.best_seller .inner .wrapper .items .slick-slide {
   margin-right: 20px;
 }
+@media (max-width: 768px) {
+  section.best_seller .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section.best_seller .inner .wrapper .items .item {
+    height: auto;
+  }
+  section.best_seller .inner .wrapper .items .item .desc {
+    margin-top: 10px;
+  }
+  section.best_seller .inner .wrapper .items .item .desc .name_and_color {
+    height: 50px;
+  }
+}
 
 /* ########## Section - Best Brand ########## */
 section.best_brand .inner .wrapper .title {
@@ -725,6 +740,21 @@ section.new .inner .wrapper .items .slick-list {
 }
 section.new .inner .wrapper .items .slick-slide {
   margin-right: 20px;
+}
+@media (max-width: 768px) {
+  section.new .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section.new .inner .wrapper .items .item {
+    height: auto;
+  }
+  section.new .inner .wrapper .items .item .desc {
+    margin-top: 10px;
+  }
+  section.new .inner .wrapper .items .item .desc .name_and_color {
+    height: 50px;
+  }
 }
 
 /* ########## Section - Magazine ########## */
