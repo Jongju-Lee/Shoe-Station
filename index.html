@@ -24,6 +24,8 @@
     <!-- Custom CSS & JS -->
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/custom.js"></script>
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <div class="container">
@@ -31,6 +33,11 @@
       <header>
         <div class="top">
           <div class="inner">
+            <div class="trigger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <div class="logo">
               <a href="#">
                 <img
@@ -47,6 +54,9 @@
             </div>
             <div class="lnb">
               <a href="#none">
+                <i class="bi bi-search"></i>
+              </a>
+              <a href="#none">
                 <i class="bi bi-person"></i>
               </a>
               <a href="#none">
@@ -62,35 +72,42 @@
           </div>
         </div>
         <div class="bottom">
+          <!-- ########## Header - GNB ########## -->
           <ul class="gnb">
             <li>
               <a class="gnb_title orange" href="#none">카테고리</a>
-              <div class="gnb_content">
+              <div class="gnb_content active">
                 <div class="inner">
                   <ul class="tab_menu">
                     <li class="sneakers active">
                       <a class="tab_title" href="#none">스니커즈</a>
                       <div class="tab_content">
                         <div>
-                          <a href="#none" class="title">캔버스화</a>
-                          <a href="#none">로우</a>
-                          <a href="#none">미드/하이</a>
-                          <a href="#none">벨크로</a>
+                          <a class="title" href="#none">캔버스화</a>
+                          <div class="items">
+                            <a class="content" href="#none">로우</a>
+                            <a class="content" href="#none">미드/하이</a>
+                            <a class="content" href="#none">벨크로</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">천연/합성가죽</a>
-                          <a href="#none">독일군</a>
-                          <a href="#none">로우</a>
-                          <a href="#none">벨크로</a>
-                          <a href="#none">스웨이드</a>
-                          <a href="#none">플랫폼</a>
-                          <a href="#none">하이</a>
+                          <div class="items">
+                            <a class="content" href="#none">독일군</a>
+                            <a class="content" href="#none">로우</a>
+                            <a class="content" href="#none">벨크로</a>
+                            <a class="content" href="#none">스웨이드</a>
+                            <a class="content" href="#none">플랫폼</a>
+                            <a class="content" href="#none">하이</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">슬립온</a>
-                          <a href="#none">가죽</a>
-                          <a href="#none">슬립온</a>
-                          <a href="#none">뮬</a>
+                          <div class="items">
+                            <a class="content" href="#none">가죽</a>
+                            <a class="content" href="#none">슬립온</a>
+                            <a class="content" href="#none">뮬</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>
@@ -100,25 +117,33 @@
                       <div class="tab_content">
                         <div>
                           <a href="#none" class="title">러닝/피트니스</a>
-                          <a href="#none">경량형</a>
-                          <a href="#none">캐주얼</a>
-                          <a href="#none">퍼포먼스</a>
+                          <div class="items">
+                            <a class="content" href="#none">경량형</a>
+                            <a class="content" href="#none">캐주얼</a>
+                            <a class="content" href="#none">퍼포먼스</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">워킹화</a>
-                          <a href="#none">캐주얼</a>
-                          <a href="#none">슬립온</a>
+                          <div class="items">
+                            <a class="content" href="#none">캐주얼</a>
+                            <a class="content" href="#none">슬립온</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">등산/트래킹화</a>
-                          <a href="#none">트래킹화</a>
-                          <a href="#none">암벽화</a>
+                          <div class="items">
+                            <a class="content" href="#none">트래킹화</a>
+                            <a class="content" href="#none">암벽화</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">작업화/주방화</a>
-                          <a href="#none">안전화</a>
-                          <a href="#none">주방화</a>
-                          <a href="#none">간호화</a>
+                          <div class="items">
+                            <a class="content" href="#none">안전화</a>
+                            <a class="content" href="#none">주방화</a>
+                            <a class="content" href="#none">간호화</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>
@@ -128,32 +153,40 @@
                       <div class="tab_content">
                         <div>
                           <a href="#none" class="title">스포츠</a>
-                          <a href="#none">라이트</a>
-                          <a href="#none">일체형/벨크로</a>
-                          <a href="#none">캐릭터</a>
+                          <div class="items">
+                            <a class="content" href="#none">라이트</a>
+                            <a class="content" href="#none">일체형/벨크로</a>
+                            <a class="content" href="#none">캐릭터</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">샌들/슬리퍼</a>
-                          <a href="#none">샌들</a>
-                          <a href="#none">캐릭터샌들</a>
-                          <a href="#none">캐릭터슬리퍼</a>
-                          <a href="#none">실내화</a>
-                          <a href="#none">아쿠아슈즈</a>
+                          <div class="items">
+                            <a class="content" href="#none">샌들</a>
+                            <a class="content" href="#none">캐릭터샌들</a>
+                            <a class="content" href="#none">캐릭터슬리퍼</a>
+                            <a class="content" href="#none">실내화</a>
+                            <a class="content" href="#none">아쿠아슈즈</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">구두/패딩슈즈</a>
-                          <a href="#none">패딩슈즈</a>
-                          <a href="#none">레인부츠</a>
-                          <a href="#none">로퍼</a>
-                          <a href="#none">캐릭터</a>
-                          <a href="#none">벨크로</a>
+                          <div class="items">
+                            <a class="content" href="#none">패딩슈즈</a>
+                            <a class="content" href="#none">레인부츠</a>
+                            <a class="content" href="#none">로퍼</a>
+                            <a class="content" href="#none">캐릭터</a>
+                            <a class="content" href="#none">벨크로</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">스니커즈</a>
-                          <a href="#none">기본형</a>
-                          <a href="#none">라이트</a>
-                          <a href="#none">벨크로</a>
-                          <a href="#none">일체형</a>
+                          <div class="items">
+                            <a class="content" href="#none">기본형</a>
+                            <a class="content" href="#none">라이트</a>
+                            <a class="content" href="#none">벨크로</a>
+                            <a class="content" href="#none">일체형</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>
@@ -163,17 +196,21 @@
                       <div class="tab_content">
                         <div>
                           <a href="#none" class="title">여성</a>
-                          <a href="#none">플랫</a>
-                          <a href="#none">로퍼/블로퍼</a>
-                          <a href="#none">워커/부츠</a>
-                          <a href="#none">스틸레토</a>
+                          <div class="items">
+                            <a class="content" href="#none">플랫</a>
+                            <a class="content" href="#none">로퍼/블로퍼</a>
+                            <a class="content" href="#none">워커/부츠</a>
+                            <a class="content" href="#none">스틸레토</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">남성</a>
-                          <a href="#none">더비</a>
-                          <a href="#none">몽크스트랩</a>
-                          <a href="#none">로퍼/블로퍼</a>
-                          <a href="#none">워커/부츠</a>
+                          <div class="items">
+                            <a class="content" href="#none">더비</a>
+                            <a class="content" href="#none">몽크스트랩</a>
+                            <a class="content" href="#none">로퍼/블로퍼</a>
+                            <a class="content" href="#none">워커/부츠</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>
@@ -183,25 +220,31 @@
                       <div class="tab_content">
                         <div>
                           <a href="#none" class="title">슬리퍼</a>
-                          <a href="#none">슬라이드</a>
-                          <a href="#none">가죽</a>
-                          <a href="#none">플립플랍</a>
-                          <a href="#none">캐릭터</a>
-                          <a href="#none">방한슬리퍼</a>
-                          <a href="#none">실내화</a>
+                          <div class="items">
+                            <a class="content" href="#none">슬라이드</a>
+                            <a class="content" href="#none">가죽</a>
+                            <a class="content" href="#none">플립플랍</a>
+                            <a class="content" href="#none">캐릭터</a>
+                            <a class="content" href="#none">방한슬리퍼</a>
+                            <a class="content" href="#none">실내화</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">샌들</a>
-                          <a href="#none">스포츠</a>
-                          <a href="#none">남성가죽</a>
-                          <a href="#none">여성스트랩</a>
-                          <a href="#none">플랫폼</a>
-                          <a href="#none">샌들힐</a>
-                          <a href="#none">주방화</a>
+                          <div class="items">
+                            <a class="content" href="#none">스포츠</a>
+                            <a class="content" href="#none">남성가죽</a>
+                            <a class="content" href="#none">여성스트랩</a>
+                            <a class="content" href="#none">플랫폼</a>
+                            <a class="content" href="#none">샌들힐</a>
+                            <a class="content" href="#none">주방화</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">아쿠아슈즈</a>
-                          <a href="#none">아쿠아슈즈</a>
+                          <div class="items">
+                            <a class="content" href="#none">아쿠아슈즈</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>
@@ -211,13 +254,17 @@
                       <div class="tab_content">
                         <div>
                           <a href="#none" class="title">부츠</a>
-                          <a href="#none">레인부츠</a>
-                          <a href="#none">털부츠</a>
+                          <div class="items">
+                            <a class="content" href="#none">레인부츠</a>
+                            <a class="content" href="#none">털부츠</a>
+                          </div>
                         </div>
                         <div>
                           <a href="#none" class="title">패딩</a>
-                          <a href="#none">로우</a>
-                          <a href="#none">하이</a>
+                          <div class="items">
+                            <a class="content" href="#none">로우</a>
+                            <a class="content" href="#none">하이</a>
+                          </div>
                         </div>
                         <span class="btn_close">닫기</span>
                       </div>

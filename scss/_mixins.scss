@@ -3,8 +3,8 @@
 
 // Mixins
 @mixin logo_property {
-  width: 150px;
-  height: 83px;
+  width: 120px;
+  height: 66px;
   transform: translateY(-5px);
   a {
     display: block;
@@ -47,14 +47,36 @@
         @include title_property;
       }
       .items {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
+        counter-reset: rank 0;
         .item {
+          position: relative;
           display: block;
           height: 300px;
           padding: 20px;
-          border: 1px solid map-get($map: $font_color, $key: fourth);
+          box-shadow: inset 0 0 15px rgba($color: #000000, $alpha: 0.1);
+          &::before {
+            content: counter(rank);
+            counter-increment: rank;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35px;
+            height: 35px;
+            line-height: 33px;
+            background-color: map-get($map: $font_color, $key: primary);
+            color: map-get($map: $font_color, $key: white);
+            font-size: map-get($map: $font-size, $key: body) * 1.1;
+            text-align: center;
+          }
+          &:nth-child(1)::before {
+            background-color: map-get($map: $theme_color, $key: primary);
+          }
+          &:nth-child(2)::before {
+            background-color: #b36724;
+          }
+          &:nth-child(3)::before {
+            background-color: #804919;
+          }
           .thum {
             width: 100%;
             height: 70%;
@@ -95,6 +117,12 @@
               }
             }
           }
+        }
+        .slick-list {
+          margin-right: -20px;
+        }
+        .slick-slide {
+          margin-right: 20px;
         }
       }
     }

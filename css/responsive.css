@@ -1,0 +1,202 @@
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Google Web Fonts CDN */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2em;
+}
+
+em {
+  font-style: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.6em;
+  min-height: 100vh;
+  margin: 0;
+  color: #333333;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Google Web Fonts CDN */
+/* ########## Mobile ########## */
+@media (max-width: 768px) {
+  /* ##### COMMON ##### */
+  .inner {
+    width: 100%;
+  }
+  .btn_close {
+    display: none;
+  }
+  /* ########## Header ########## */
+  header .top .inner {
+    position: relative;
+    padding: 0 20px;
+    height: 70px;
+  }
+  header .top .inner .trigger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 19px;
+  }
+  header .top .inner .trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    transition: 0.5s;
+  }
+  header .top .inner .trigger span:nth-child(1) {
+    top: 0;
+  }
+  header .top .inner .trigger span:nth-child(2) {
+    top: 50%;
+  }
+  header .top .inner .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  header .top .inner .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  header .top .inner .trigger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header .top .inner .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  header .top .inner .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100px;
+    height: 55px;
+  }
+  header .top .inner .search_field {
+    display: none;
+  }
+  header .top .inner .lnb a {
+    margin-right: 10px;
+  }
+  header .top .inner .lnb a:nth-child(1) {
+    display: inline-block;
+  }
+  header .top .inner .lnb a:nth-child(2), header .top .inner .lnb a:nth-child(3), header .top .inner .lnb a:nth-child(4) {
+    display: none;
+  }
+  header .bottom .gnb {
+    display: none;
+    margin-top: 0px;
+    background-color: #ffffff;
+    height: auto;
+  }
+  header .bottom .gnb.active {
+    display: block;
+  }
+  header .bottom .gnb > li {
+    display: none;
+  }
+  header .bottom .gnb > li:nth-child(1), header .bottom .gnb > li:nth-child(2) {
+    display: inline-block;
+    width: 49%;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_title, header .bottom .gnb > li:nth-child(2) .gnb_title {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_title.orange, header .bottom .gnb > li:nth-child(2) .gnb_title.orange {
+    color: #333333;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content, header .bottom .gnb > li:nth-child(2) .gnb_content {
+    top: 50px;
+    min-height: 100vh;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu {
+    display: block;
+    width: 100%;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_title {
+    padding: 0 30px;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #dddddd;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_title::after {
+    content: "\f286";
+    font-family: "bootstrap-icons";
+    float: right;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li.active a.tab_title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li.active a.tab_title::after {
+    border: 1px solid #000;
+    transform: rotate(180deg);
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li.active a.tab_title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li.active a.tab_title {
+    background-color: red;
+    border-bottom: none;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li:last-child a.tab_title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li:last-child a.tab_title {
+    border-bottom: none;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content {
+    position: static;
+    width: 100%;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div {
+    float: none;
+    width: 100%;
+    text-align: left;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div .items, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div .items {
+    display: none;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div.active .items, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div.active .items {
+    display: block;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a {
+    padding: 5px 60px;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title {
+    padding: 10px 45px;
+  }
+  /* ########## Section - Intro ########## */
+  section.intro {
+    padding-top: 70px;
+  }
+}

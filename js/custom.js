@@ -1,4 +1,9 @@
 $(function () {
+  /* ##### Header - Trigger(Mobile) ##### */
+  $(".trigger").click(function () {
+    $(this).toggleClass("active");
+    $(".gnb").toggleClass("active");
+  });
   /* ##### GNB - Mega Menu ##### */
   $(".gnb_title").hover(function () {
     $(".gnb_content").removeClass("active");
@@ -18,6 +23,10 @@ $(function () {
   $(".btn_close").click(function () {
     $(".gnb_content").removeClass("active");
   });
+  $(".tab_content .title").click(function () {
+    $(this).parent().toggleClass("active");
+    $(this).parent().siblings().removeClass("active");
+  });
   /* ########## Slick.js ########## */
   /* ##### Section - Intro(Banner Slider) ##### */
   $(".intro_slider").slick({
@@ -33,17 +42,11 @@ $(function () {
     arrows: true,
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -68,7 +71,7 @@ $(function () {
       },
     ],
   });
-  /* ##### Section - Magazine(Magazine Slider) ##### */
+  /* ##### Section - Magazine ##### */
   $(".magazine_slider").slick({
     dots: true,
     infinite: true,
@@ -86,6 +89,26 @@ $(function () {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+  /* ##### Section - Best Seller, New ##### */
+  $(".best_seller .items, .new .items").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: false,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
