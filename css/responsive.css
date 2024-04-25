@@ -164,11 +164,9 @@ body {
     float: right;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li.active a.tab_title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li.active a.tab_title::after {
-    border: 1px solid #000;
     transform: rotate(180deg);
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li.active a.tab_title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li.active a.tab_title {
-    background-color: red;
     border-bottom: none;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li:last-child a.tab_title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li:last-child a.tab_title {
@@ -195,8 +193,38 @@ body {
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title {
     padding: 10px 45px;
   }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title::after {
+    content: "\f286";
+    font-family: "bootstrap-icons";
+    float: right;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title.active::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title.active::after {
+    transform: rotate(180deg);
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content.brand_menu .inner, header .bottom .gnb > li:nth-child(2) .gnb_content.brand_menu .inner {
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content.brand_menu .inner .main_logo, header .bottom .gnb > li:nth-child(2) .gnb_content.brand_menu .inner .main_logo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .bottom .gnb > li:nth-child(1) .gnb_content.brand_menu .inner .gray_logo, header .bottom .gnb > li:nth-child(2) .gnb_content.brand_menu .inner .gray_logo {
+    grid-template-columns: repeat(2, 1fr);
+  }
   /* ########## Section - Intro ########## */
   section.intro {
     padding-top: 70px;
+  }
+  section.intro .intro_slider .item .desc {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+  }
+  section.intro .intro_slider .item .desc h3 {
+    font-size: 27.5px;
+  }
+  section.intro .intro_slider .item .desc span {
+    font-size: 18px;
   }
 }

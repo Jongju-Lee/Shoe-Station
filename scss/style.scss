@@ -79,6 +79,37 @@ section {
     transform: translateX(10px) translateY(5px);
   }
 }
+/* Magazine Slider */
+.magazine_slider {
+  .slick-prev,
+  .slick-next {
+    width: 60px;
+    height: 60px;
+    color: map-get($map: $font_color, $key: white);
+    z-index: 1000;
+    text-align: center;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    display: inline-block;
+    color: map-get($map: $font_color, $key: fourth);
+    font-family: "bootstrap-icons";
+    font-size: 40px;
+    opacity: 1;
+  }
+  .slick-prev {
+    left: -50px;
+  }
+  .slick-next {
+    right: -50px;
+  }
+  .slick-prev:before {
+    content: "\F284";
+  }
+  .slick-next:before {
+    content: "\F285";
+  }
+}
 /* Custom Dots */
 .slick-dots {
   bottom: -50px;
@@ -259,6 +290,7 @@ header {
                 &:last-child .tab_title {
                   border-bottom: none;
                 }
+                &:hover .tab_title,
                 &.active .tab_title {
                   background-color: map-get($map: $theme_color, $key: white);
                   color: map-get($map: $theme_color, $key: primary);
@@ -291,6 +323,9 @@ header {
                       }
                     }
                   }
+                }
+                &:hover .tab_content {
+                  display: block;
                 }
                 &.active .tab_content {
                   display: block;

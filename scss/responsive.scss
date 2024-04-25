@@ -129,11 +129,9 @@
                       }
                     }
                     &.active a.tab_title::after {
-                      border: 1px solid #000;
                       transform: rotate(180deg);
                     }
                     &.active a.tab_title {
-                      background-color: red;
                       border-bottom: none;
                     }
                     &:last-child a.tab_title {
@@ -156,10 +154,31 @@
                           padding: 5px 60px;
                           &.title {
                             padding: 10px 45px;
+                            &::after {
+                              content: "\F286";
+                              font-family: "bootstrap-icons";
+                              float: right;
+                            }
+                            &.active::after {
+                              transform: rotate(180deg);
+                            }
                           }
                         }
                       }
                     }
+                  }
+                }
+              }
+              &.brand_menu {
+                .inner {
+                  width: 100%;
+                  padding: 0 20px;
+                  height: auto;
+                  .main_logo {
+                    grid-template-columns: repeat(1, 1fr);
+                  }
+                  .gray_logo {
+                    grid-template-columns: repeat(2, 1fr);
                   }
                 }
               }
@@ -172,5 +191,20 @@
   /* ########## Section - Intro ########## */
   section.intro {
     padding-top: 70px;
+    .intro_slider {
+      .item {
+        .desc {
+          position: absolute;
+          bottom: 40px;
+          left: 20px;
+          h3 {
+            font-size: map-get($map: $font-size, $key: h2) * 1.1;
+          }
+          span {
+            font-size: map-get($map: $font-size, $key: body) * 1.2;
+          }
+        }
+      }
+    }
   }
 }

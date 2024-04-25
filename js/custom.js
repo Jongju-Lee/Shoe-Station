@@ -13,12 +13,12 @@ $(function () {
     $(this).removeClass("active");
     $(".sneakers").addClass("active");
   });
-  $(".tab_menu li").mouseenter(function () {
-    $(".tab_menu li").removeClass("active");
-    $(this).addClass("active");
-  });
   $(".tab_menu li").mouseleave(function () {
     $(this).removeClass("active");
+  });
+  $(".tab_menu li").click(function () {
+    $(".tab_menu li").removeClass("active");
+    $(this).addClass("active");
   });
   $(".btn_close").click(function () {
     $(".gnb_content").removeClass("active");
@@ -26,6 +26,7 @@ $(function () {
   $(".tab_content .title").click(function () {
     $(this).parent().toggleClass("active");
     $(this).parent().siblings().removeClass("active");
+    $(this).toggleClass("active");
   });
   /* ########## Slick.js ########## */
   /* ##### Section - Intro(Banner Slider) ##### */
