@@ -8,6 +8,7 @@
   /* ##### COMMON ##### */
   .inner {
     width: 100%;
+    padding: 0 20px;
   }
   .btn_close {
     display: none;
@@ -17,7 +18,6 @@
     .top {
       .inner {
         position: relative;
-        padding: 0 20px;
         height: 70px;
         .trigger {
           position: relative;
@@ -172,7 +172,6 @@
               &.brand_menu {
                 .inner {
                   width: 100%;
-                  padding: 0 20px;
                   height: auto;
                   .main_logo {
                     grid-template-columns: repeat(1, 1fr);
@@ -207,10 +206,26 @@
       }
     }
   }
-  /* ########## Section - Best Seller, New ########## */
+  /* ########## Section - Best Seller ########## */
   /* Mixins 안에 mediaQuery로 반응형 하였음. */
 
   /* ########## Section - Best Brand ########## */
   section.best_brand {
+    .inner {
+      .wrapper {
+        .content {
+          height: auto;
+          article {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  /* ########## Section - new ########## */
+  section.new {
+    margin-top: 0;
+    /* Mixins 안에 mediaQuery로 반응형 하였음. */
   }
 }

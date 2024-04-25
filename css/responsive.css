@@ -56,6 +56,7 @@ body {
   /* ##### COMMON ##### */
   .inner {
     width: 100%;
+    padding: 0 20px;
   }
   .btn_close {
     display: none;
@@ -63,7 +64,6 @@ body {
   /* ########## Header ########## */
   header .top .inner {
     position: relative;
-    padding: 0 20px;
     height: 70px;
   }
   header .top .inner .trigger {
@@ -204,7 +204,6 @@ body {
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content.brand_menu .inner, header .bottom .gnb > li:nth-child(2) .gnb_content.brand_menu .inner {
     width: 100%;
-    padding: 0 20px;
     height: auto;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content.brand_menu .inner .main_logo, header .bottom .gnb > li:nth-child(2) .gnb_content.brand_menu .inner .main_logo {
@@ -228,7 +227,19 @@ body {
   section.intro .intro_slider .item .desc span {
     font-size: 18px;
   }
-  /* ########## Section - Best Seller, New ########## */
+  /* ########## Section - Best Seller ########## */
   /* Mixins 안에 mediaQuery로 반응형 하였음. */
   /* ########## Section - Best Brand ########## */
+  section.best_brand .inner .wrapper .content {
+    height: auto;
+  }
+  section.best_brand .inner .wrapper .content article {
+    display: block;
+    width: 100%;
+  }
+  /* ########## Section - new ########## */
+  section.new {
+    margin-top: 0;
+    /* Mixins 안에 mediaQuery로 반응형 하였음. */
+  }
 }
