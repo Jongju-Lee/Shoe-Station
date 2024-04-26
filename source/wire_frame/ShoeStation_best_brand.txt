@@ -6,12 +6,14 @@
 			.wrapper
 				h2.title
 				.content
+					{
 					article
-						.thum
-							img
+						.thum > a > img
 							span.desc > b
 						aside
-						.best_brand_sub_slider
-							a.item > img
-						
-						
+							.best_brand_sub_slider
+								(a.item > img) * 3
+					} * 3 repeat	
+					
+					
+					

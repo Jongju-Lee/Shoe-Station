@@ -120,29 +120,6 @@ section {
   content: "\f285";
 }
 
-/* Best Brand - Sub Slider */
-.best_brand_sub_slider .slick-prev,
-.best_brand_sub_slider .slick-next {
-  width: 35px;
-  height: 35px;
-}
-.best_brand_sub_slider .slick-prev:before,
-.best_brand_sub_slider .slick-next:before {
-  display: inline-block;
-  color: #dddddd;
-  font-family: "bootstrap-icons";
-  font-size: 35px;
-  opacity: 1;
-}
-.best_brand_sub_slider .slick-prev:before {
-  content: "\f284";
-  transform: translateX(-10px) translateY(5px);
-}
-.best_brand_sub_slider .slick-next:before {
-  content: "\f285";
-  transform: translateX(10px) translateY(5px);
-}
-
 /* Magazine Slider */
 .magazine_slider .slick-prev,
 .magazine_slider .slick-next {
@@ -183,13 +160,36 @@ section {
 .slick-dots li button::before {
   font-size: 12px;
 }
+.slick-dots li button::before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  transition: 0.35s;
+}
 .slick-dots li.slick-active button::before {
+  content: "";
+  width: 30px;
+  height: 10px;
+  border-radius: 15px;
+  background-color: #e67e22;
   color: #e67e22;
+}
+
+/* Custom Dots - Best Brand(Sub Slider) */
+.best_brand_sub_slider .slick-dots {
+  bottom: -25px;
 }
 
 /* Custom Dots - Magazine Slider */
 .magazine_slider .slick-dots {
-  bottom: -30px;
+  bottom: -35px;
 }
 
 /* ########## Header ########## */
@@ -511,17 +511,22 @@ section.best_seller .inner .wrapper .title {
   font-size: 30px;
   margin-bottom: 30px;
 }
-section.best_seller .inner .wrapper .items {
+@media (max-width: 768px) {
+  section.best_seller .inner .wrapper .title {
+    font-size: 25px;
+  }
+}
+section.best_seller .inner .wrapper .product_slider {
   counter-reset: rank 0;
 }
-section.best_seller .inner .wrapper .items .item {
+section.best_seller .inner .wrapper .product_slider .item {
   position: relative;
   display: block;
   height: 300px;
   padding: 20px;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
 }
-section.best_seller .inner .wrapper .items .item::before {
+section.best_seller .inner .wrapper .product_slider .item::before {
   content: counter(rank);
   counter-increment: rank;
   position: absolute;
@@ -535,55 +540,56 @@ section.best_seller .inner .wrapper .items .item::before {
   font-size: 16.5px;
   text-align: center;
 }
-section.best_seller .inner .wrapper .items .item:nth-child(1)::before {
+section.best_seller .inner .wrapper .product_slider .item:nth-child(1)::before {
   background-color: #e67e22;
 }
-section.best_seller .inner .wrapper .items .item:nth-child(2)::before {
+section.best_seller .inner .wrapper .product_slider .item:nth-child(2)::before {
   background-color: #b36724;
 }
-section.best_seller .inner .wrapper .items .item:nth-child(3)::before {
+section.best_seller .inner .wrapper .product_slider .item:nth-child(3)::before {
   background-color: #804919;
 }
-section.best_seller .inner .wrapper .items .item .thum {
+section.best_seller .inner .wrapper .product_slider .item .thum {
   width: 100%;
   height: 70%;
 }
-section.best_seller .inner .wrapper .items .item .thum img {
+section.best_seller .inner .wrapper .product_slider .item .thum img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-section.best_seller .inner .wrapper .items .item .desc {
+section.best_seller .inner .wrapper .product_slider .item .desc {
   margin-top: 5px;
 }
-section.best_seller .inner .wrapper .items .item .desc b {
+section.best_seller .inner .wrapper .product_slider .item .desc b {
   text-transform: uppercase;
 }
-section.best_seller .inner .wrapper .items .item .desc .name_and_color {
+section.best_seller .inner .wrapper .product_slider .item .desc .name_and_color {
   margin-top: 3px;
   font-weight: 500;
 }
-section.best_seller .inner .wrapper .items .item .desc .name_and_color em::before {
+section.best_seller .inner .wrapper .product_slider .item .desc .name_and_color em::before {
   content: "|";
   margin-right: 4px;
 }
-section.best_seller .inner .wrapper .items .item .desc .price_and_sale {
+section.best_seller .inner .wrapper .product_slider .item .desc .price_and_sale {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
   font-size: 16.5px;
   margin-top: 3px;
 }
-section.best_seller .inner .wrapper .items .item .desc .price_and_sale em {
+section.best_seller .inner .wrapper .product_slider .item .desc .price_and_sale em {
   color: #e67e22;
 }
-section.best_seller .inner .wrapper .items .item .desc .price_and_sale em::after {
+section.best_seller .inner .wrapper .product_slider .item .desc .price_and_sale em::after {
   content: "%";
 }
-section.best_seller .inner .wrapper .items .slick-list {
+section.best_seller .inner .wrapper .product_slider .slick-list {
   margin-right: -20px;
 }
-section.best_seller .inner .wrapper .items .slick-slide {
+section.best_seller .inner .wrapper .product_slider .slick-slide {
   margin-right: 20px;
 }
 @media (max-width: 768px) {
@@ -607,6 +613,11 @@ section.best_brand .inner .wrapper .title {
   font-size: 30px;
   margin-bottom: 30px;
 }
+@media (max-width: 768px) {
+  section.best_brand .inner .wrapper .title {
+    font-size: 25px;
+  }
+}
 section.best_brand .inner .wrapper .content {
   height: 400px;
 }
@@ -622,6 +633,10 @@ section.best_brand .inner .wrapper .content article .thum {
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+}
+section.best_brand .inner .wrapper .content article .thum:hover a img {
+  transform: scale(1.05);
 }
 section.best_brand .inner .wrapper .content article .thum a {
   position: absolute;
@@ -630,10 +645,12 @@ section.best_brand .inner .wrapper .content article .thum a {
   width: 100%;
   height: 100%;
 }
-section.best_brand .inner .wrapper .content article .thum img {
+section.best_brand .inner .wrapper .content article .thum a img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.2s;
 }
 section.best_brand .inner .wrapper .content article .thum .desc {
   position: absolute;
@@ -651,7 +668,7 @@ section.best_brand .inner .wrapper .content article .thum .desc b {
 section.best_brand .inner .wrapper .content article aside {
   width: 100%;
   border: 1px solid #dddddd;
-  padding: 20px 40px;
+  padding: 10px 30px;
 }
 section.best_brand .inner .wrapper .content article aside .best_brand_sub_slider .item {
   margin: 0 5px;
@@ -671,17 +688,22 @@ section.new .inner .wrapper .title {
   font-size: 30px;
   margin-bottom: 30px;
 }
-section.new .inner .wrapper .items {
+@media (max-width: 768px) {
+  section.new .inner .wrapper .title {
+    font-size: 25px;
+  }
+}
+section.new .inner .wrapper .product_slider {
   counter-reset: rank 0;
 }
-section.new .inner .wrapper .items .item {
+section.new .inner .wrapper .product_slider .item {
   position: relative;
   display: block;
   height: 300px;
   padding: 20px;
   box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
 }
-section.new .inner .wrapper .items .item::before {
+section.new .inner .wrapper .product_slider .item::before {
   content: counter(rank);
   counter-increment: rank;
   position: absolute;
@@ -695,55 +717,56 @@ section.new .inner .wrapper .items .item::before {
   font-size: 16.5px;
   text-align: center;
 }
-section.new .inner .wrapper .items .item:nth-child(1)::before {
+section.new .inner .wrapper .product_slider .item:nth-child(1)::before {
   background-color: #e67e22;
 }
-section.new .inner .wrapper .items .item:nth-child(2)::before {
+section.new .inner .wrapper .product_slider .item:nth-child(2)::before {
   background-color: #b36724;
 }
-section.new .inner .wrapper .items .item:nth-child(3)::before {
+section.new .inner .wrapper .product_slider .item:nth-child(3)::before {
   background-color: #804919;
 }
-section.new .inner .wrapper .items .item .thum {
+section.new .inner .wrapper .product_slider .item .thum {
   width: 100%;
   height: 70%;
 }
-section.new .inner .wrapper .items .item .thum img {
+section.new .inner .wrapper .product_slider .item .thum img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-section.new .inner .wrapper .items .item .desc {
+section.new .inner .wrapper .product_slider .item .desc {
   margin-top: 5px;
 }
-section.new .inner .wrapper .items .item .desc b {
+section.new .inner .wrapper .product_slider .item .desc b {
   text-transform: uppercase;
 }
-section.new .inner .wrapper .items .item .desc .name_and_color {
+section.new .inner .wrapper .product_slider .item .desc .name_and_color {
   margin-top: 3px;
   font-weight: 500;
 }
-section.new .inner .wrapper .items .item .desc .name_and_color em::before {
+section.new .inner .wrapper .product_slider .item .desc .name_and_color em::before {
   content: "|";
   margin-right: 4px;
 }
-section.new .inner .wrapper .items .item .desc .price_and_sale {
+section.new .inner .wrapper .product_slider .item .desc .price_and_sale {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
   font-size: 16.5px;
   margin-top: 3px;
 }
-section.new .inner .wrapper .items .item .desc .price_and_sale em {
+section.new .inner .wrapper .product_slider .item .desc .price_and_sale em {
   color: #e67e22;
 }
-section.new .inner .wrapper .items .item .desc .price_and_sale em::after {
+section.new .inner .wrapper .product_slider .item .desc .price_and_sale em::after {
   content: "%";
 }
-section.new .inner .wrapper .items .slick-list {
+section.new .inner .wrapper .product_slider .slick-list {
   margin-right: -20px;
 }
-section.new .inner .wrapper .items .slick-slide {
+section.new .inner .wrapper .product_slider .slick-slide {
   margin-right: 20px;
 }
 @media (max-width: 768px) {
@@ -763,10 +786,22 @@ section.new .inner .wrapper .items .slick-slide {
 }
 
 /* ########## Section - Magazine ########## */
+section.magazine {
+  margin-top: 50px;
+  background-color: #f5f5f5;
+}
+section.magazine .inner {
+  width: 1000px;
+}
 section.magazine .inner .magazine_slider_outer .title {
   font-size: 30px;
   margin-bottom: 30px;
   font-weight: 900;
+}
+@media (max-width: 768px) {
+  section.magazine .inner .magazine_slider_outer .title {
+    font-size: 25px;
+  }
 }
 section.magazine .inner .magazine_slider_outer .magazine_slider {
   /* Custom Slick SCSS */
@@ -775,19 +810,19 @@ section.magazine .inner .magazine_slider_outer .magazine_slider .item {
   position: relative;
 }
 section.magazine .inner .magazine_slider_outer .magazine_slider .item a {
-  border: 1px solid white;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
 }
-section.magazine .inner .magazine_slider_outer .magazine_slider .item .thum {
+section.magazine .inner .magazine_slider_outer .magazine_slider .item a .thum {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-section.magazine .inner .magazine_slider_outer .magazine_slider .item .thum img {
+section.magazine .inner .magazine_slider_outer .magazine_slider .item a .thum:hover img {
+  transform: scale(1.05);
+}
+section.magazine .inner .magazine_slider_outer .magazine_slider .item a .thum img {
   display: block;
   width: 100%;
   height: 100%;
@@ -901,15 +936,15 @@ footer .service .service_inner .title span {
   margin-top: 10px;
 }
 footer .service .service_inner .items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 30px;
 }
 footer .service .service_inner .items .item .icon {
   position: relative;
   width: 100px;
   height: 100px;
+  margin: auto;
   background-color: #ffffff;
   border-radius: 50%;
   margin-bottom: 15px;
@@ -1002,18 +1037,21 @@ footer .bottom .inner .items .copyright {
   color: #999999;
 }
 footer .bottom .inner .items .copyright .links a {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 footer .bottom .inner .items .copyright .links a:hover {
   text-decoration: underline;
   color: #000000;
 }
 footer .bottom .inner .items .copyright .links a span {
+  position: relative;
   color: #000000;
 }
 footer .bottom .inner .items .copyright .links a span::after {
   content: "˙";
-  display: inline-block;
+  position: absolute;
+  top: -5px;
+  right: -9px;
   transform: translateY(-5px);
   font-size: 20px;
   color: #e67e22;

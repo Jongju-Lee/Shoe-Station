@@ -8,24 +8,26 @@
 				.search_field
 					input[type=search]
 					button.btn_search > font-icon
-				.lnb > a(::after) > font-icon * 4
+				.lnb > a(::after) > font-icon * 5
 			.bottom
 				ul.gnb
 					li > a.gnb_title
 					li > .gnb_content
-						ul.tab_menu
-							li > a.tab_title
-							li > tab_content
-								div
-									a.title
-									a * n
-								span.btn_close > font-icon
+						.inner
+							ul.tab_menu
+								li > a.tab_title
+								li > tab_content
+									div
+										a.title
+										.items
+											a * n
+									span.btn_close > font-icon
 	section.intro
 		.intro_slider
-			.item
+			a.item
 				img
 				.desc
-					b
+					h3
 					span
 					
 				

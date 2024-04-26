@@ -4,16 +4,18 @@
 	footer
 		.service
 			.service_inner
-				h2.title
+				h2.title > span
 				.items
+					{
 					a.item
 						.icon > ::after(font-icon)
 						span
+					} * 4 repeat
 		.center
 			.inner
 				.info
-					span.phone
-						b
+					.phone
+						span > b
 						em
 					p.desc
 		.bottom
@@ -22,5 +24,7 @@
 					.logo > a > img
 					.copyright
 						.links > a * n
-						span
+						span > em
+						
+						
 						

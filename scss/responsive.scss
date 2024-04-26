@@ -6,6 +6,9 @@
 /* ########## Mobile ########## */
 @media (max-width: 768px) {
   /* ##### COMMON ##### */
+  section {
+    padding: 30px 0;
+  }
   .inner {
     width: 100%;
     padding: 0 20px;
@@ -57,7 +60,7 @@
         }
         .logo {
           position: absolute;
-          top: 50%;
+          top: 45%;
           left: 50%;
           transform: translate(-50%, -55%);
           width: 100px;
@@ -141,6 +144,7 @@
                     .tab_content {
                       position: static;
                       width: 100%;
+                      border: none;
                       div {
                         float: none;
                         width: 100%;
@@ -153,6 +157,7 @@
                         }
                         a {
                           padding: 5px 60px;
+                          border-right: none;
                           &.title {
                             padding: 10px 45px;
                             &::after {
@@ -214,6 +219,7 @@
 
   /* ########## Section - Best Brand ########## */
   section.best_brand {
+    padding-top: 50px;
     .inner {
       .wrapper {
         .content {
@@ -221,6 +227,23 @@
           article {
             display: block;
             width: 100%;
+            margin-bottom: 20px;
+            &:not(:last-child) {
+              margin-right: 0;
+            }
+            .thum {
+              a {
+                position: static;
+              }
+              .desc {
+                bottom: 25px;
+                left: 20px;
+              }
+            }
+            aside {
+              padding: 20px;
+              padding-bottom: 10px;
+            }
           }
         }
       }
@@ -234,15 +257,30 @@
   /* ########## Section - Magazine ########## */
   section.magazine {
     .inner {
+      width: 100%;
       .magazine_slider_outer {
         .title {
           font-weight: map-get($map: $font_weight, $key: bold);
+        }
+        .magazine_slider {
+          .item {
+            .desc {
+              b {
+                margin-bottom: 5px;
+                font-size: map-get($map: $font-size, $key: h3);
+              }
+              span {
+                font-size: map-get($map: $font-size, $key: body) * 1.1;
+              }
+            }
+          }
         }
       }
     }
   }
   /* ########## Section - Insta ########## */
   section.insta {
+    padding-top: 50px;
     .items {
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
@@ -266,6 +304,81 @@
               }
               span {
                 font-size: map-get($map: $font-size, $key: body) * 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* ########## Footer ########## */
+  footer {
+    .service {
+      .service_inner {
+        width: 100%;
+        padding: 40px 0;
+        .title {
+          font-size: map-get($map: $font-size, $key: h3);
+        }
+        .items {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 30px;
+          padding: 0 30px;
+          .item {
+            .icon {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 10px;
+              &::after {
+                line-height: 80px;
+                font-size: map-get($map: $font-size, $key: h1);
+              }
+            }
+            span {
+              font-size: map-get($map: $font-size, $key: body);
+            }
+          }
+        }
+      }
+    }
+    .center {
+      .inner {
+        padding: 30px 20px;
+        .info {
+          .phone {
+            span {
+              font-size: map-get($map: $font-size, $key: h3);
+            }
+            em {
+              margin-left: 5px;
+              letter-spacing: 2px;
+              font-weight: map-get($map: $font_weight, $key: bold);
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      .inner {
+        .items {
+          .logo {
+            margin-left: -10px;
+          }
+          .copyright {
+            margin-left: 10px;
+            font-size: map-get($map: $font-size, $key: body) * 0.8;
+            .links {
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              a {
+                margin-right: 5px;
+              }
+            }
+            span em {
+              margin-top: 10px;
+              display: block;
+              &::after {
+                display: none;
               }
             }
           }

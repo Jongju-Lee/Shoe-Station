@@ -52,22 +52,42 @@ $(function () {
       },
     ],
   });
-  /* ##### Section - Best Brand(Sub Slider) ##### */
-  $(".best_brand_sub_slider").slick({
+  /* ##### Section - Best Seller, New ##### */
+  $(".product_slider").slick({
     dots: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: false,
-    arrows: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: false,
+    dots: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+        },
+      },
+    ],
+  });
+  /* ##### Section - Best Brand(Sub Slider) ##### */
+  $(".best_brand_sub_slider").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    infinite: true,
+    dots: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
         },
       },
     ],
@@ -91,26 +111,6 @@ $(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-        },
-      },
-    ],
-  });
-  /* ##### Section - Best Seller, New ##### */
-  $(".best_seller .items, .new .items").slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    infinite: false,
-    dots: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
         },
       },
     ],

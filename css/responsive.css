@@ -54,6 +54,9 @@ body {
 /* ########## Mobile ########## */
 @media (max-width: 768px) {
   /* ##### COMMON ##### */
+  section {
+    padding: 30px 0;
+  }
   .inner {
     width: 100%;
     padding: 0 20px;
@@ -102,7 +105,7 @@ body {
   }
   header .top .inner .logo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -55%);
     width: 100px;
@@ -177,6 +180,7 @@ body {
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content {
     position: static;
     width: 100%;
+    border: none;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div {
     float: none;
@@ -191,6 +195,7 @@ body {
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a {
     padding: 5px 60px;
+    border-right: none;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title {
     padding: 10px 45px;
@@ -232,12 +237,30 @@ body {
   /* ########## Section - Best Seller ########## */
   /* Mixins 안에 mediaQuery로 반응형 하였음. */
   /* ########## Section - Best Brand ########## */
+  section.best_brand {
+    padding-top: 50px;
+  }
   section.best_brand .inner .wrapper .content {
     height: auto;
   }
   section.best_brand .inner .wrapper .content article {
     display: block;
     width: 100%;
+    margin-bottom: 20px;
+  }
+  section.best_brand .inner .wrapper .content article:not(:last-child) {
+    margin-right: 0;
+  }
+  section.best_brand .inner .wrapper .content article .thum a {
+    position: static;
+  }
+  section.best_brand .inner .wrapper .content article .thum .desc {
+    bottom: 25px;
+    left: 20px;
+  }
+  section.best_brand .inner .wrapper .content article aside {
+    padding: 20px;
+    padding-bottom: 10px;
   }
   /* ########## Section - new ########## */
   section.new {
@@ -245,10 +268,23 @@ body {
     /* Mixins 안에 mediaQuery로 반응형 하였음. */
   }
   /* ########## Section - Magazine ########## */
+  section.magazine .inner {
+    width: 100%;
+  }
   section.magazine .inner .magazine_slider_outer .title {
     font-weight: 700;
   }
+  section.magazine .inner .magazine_slider_outer .magazine_slider .item .desc b {
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  section.magazine .inner .magazine_slider_outer .magazine_slider .item .desc span {
+    font-size: 16.5px;
+  }
   /* ########## Section - Insta ########## */
+  section.insta {
+    padding-top: 50px;
+  }
   section.insta .items {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -273,5 +309,62 @@ body {
   }
   section.insta .items .thum.hash_tag a .desc span {
     font-size: 18px;
+  }
+  /* ########## Footer ########## */
+  footer .service .service_inner {
+    width: 100%;
+    padding: 40px 0;
+  }
+  footer .service .service_inner .title {
+    font-size: 20px;
+  }
+  footer .service .service_inner .items {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    padding: 0 30px;
+  }
+  footer .service .service_inner .items .item .icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  footer .service .service_inner .items .item .icon::after {
+    line-height: 80px;
+    font-size: 35px;
+  }
+  footer .service .service_inner .items .item span {
+    font-size: 15px;
+  }
+  footer .center .inner {
+    padding: 30px 20px;
+  }
+  footer .center .inner .info .phone span {
+    font-size: 20px;
+  }
+  footer .center .inner .info .phone em {
+    margin-left: 5px;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  footer .bottom .inner .items .logo {
+    margin-left: -10px;
+  }
+  footer .bottom .inner .items .copyright {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  footer .bottom .inner .items .copyright .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .bottom .inner .items .copyright .links a {
+    margin-right: 5px;
+  }
+  footer .bottom .inner .items .copyright span em {
+    margin-top: 10px;
+    display: block;
+  }
+  footer .bottom .inner .items .copyright span em::after {
+    display: none;
   }
 }

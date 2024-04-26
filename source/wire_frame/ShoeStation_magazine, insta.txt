@@ -3,24 +3,22 @@
 
 	section.magazine
 		.inner
-			.items_outer
+			.magazine_slider_outer
 				h2.title
-				.items
+				.magazine_slider
 					.item
-						.thum > img
+						a > .thum > img
 						.desc
 							b
 							span
 	section.insta
-		.hash_tag
-			a
-				.insta_icon
-				.desc
-					b
-					span
 		.items
-			.thum
-				a > img
-			
+			.thum.hash_tag
+				a
+					.insta_icon > img
+					.desc
+						b
+						span * 4
+			(.thum > a > img) * 3
 			
 			
