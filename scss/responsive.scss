@@ -125,6 +125,7 @@
                       &::after {
                         content: "\F286";
                         font-family: "bootstrap-icons";
+                        font-size: map-get($map: $font-size, $key: body) * 0.8;
                         float: right;
                       }
                     }
@@ -157,6 +158,8 @@
                             &::after {
                               content: "\F286";
                               font-family: "bootstrap-icons";
+                              font-size: map-get($map: $font-size, $key: body) *
+                                0.8;
                               float: right;
                             }
                             &.active::after {
@@ -227,5 +230,47 @@
   section.new {
     margin-top: 0;
     /* Mixins 안에 mediaQuery로 반응형 하였음. */
+  }
+  /* ########## Section - Magazine ########## */
+  section.magazine {
+    .inner {
+      .magazine_slider_outer {
+        .title {
+          font-weight: map-get($map: $font_weight, $key: bold);
+        }
+      }
+    }
+  }
+  /* ########## Section - Insta ########## */
+  section.insta {
+    .items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      .thum {
+        &:nth-child(2) {
+          grid-area: 2 span / 2 span;
+        }
+        &.hash_tag {
+          grid-area: 2 span / 2 span;
+          a {
+            padding: 0;
+            .insta_icon {
+              width: 50px;
+              height: 50px;
+            }
+            .desc {
+              b {
+                font-size: map-get($map: $font-size, $key: h2);
+                font-weight: map-get($map: $font_weight, $key: bold);
+                line-height: 1.2em;
+              }
+              span {
+                font-size: map-get($map: $font-size, $key: body) * 1.2;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

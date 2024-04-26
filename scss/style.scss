@@ -110,7 +110,7 @@ section {
     content: "\F285";
   }
 }
-/* Custom Dots */
+/* ##### Custom Dots ##### */
 .slick-dots {
   bottom: -50px;
   li {
@@ -125,6 +125,13 @@ section {
     }
   }
 }
+/* Custom Dots - Magazine Slider */
+.magazine_slider {
+  .slick-dots {
+    bottom: -30px;
+  }
+}
+
 /* ########## Header ########## */
 header {
   position: fixed;
@@ -589,7 +596,8 @@ section.magazine {
 /* ########## Section - Insta ########## */
 section.insta {
   .items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding: 0 30px;
     gap: 20px;
     height: 100%;

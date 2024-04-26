@@ -173,7 +173,7 @@ section {
   content: "\f285";
 }
 
-/* Custom Dots */
+/* ##### Custom Dots ##### */
 .slick-dots {
   bottom: -50px;
 }
@@ -185,6 +185,11 @@ section {
 }
 .slick-dots li.slick-active button::before {
   color: #e67e22;
+}
+
+/* Custom Dots - Magazine Slider */
+.magazine_slider .slick-dots {
+  bottom: -30px;
 }
 
 /* ########## Header ########## */
@@ -828,7 +833,8 @@ section.magazine .inner .magazine_slider_outer .magazine_slider .slick-next:befo
 
 /* ########## Section - Insta ########## */
 section.insta .items {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   padding: 0 30px;
   gap: 20px;
   height: 100%;

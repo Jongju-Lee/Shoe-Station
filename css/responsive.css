@@ -162,6 +162,7 @@ body {
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_title::after {
     content: "\f286";
     font-family: "bootstrap-icons";
+    font-size: 12px;
     float: right;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li.active a.tab_title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li.active a.tab_title::after {
@@ -197,6 +198,7 @@ body {
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title::after {
     content: "\f286";
     font-family: "bootstrap-icons";
+    font-size: 12px;
     float: right;
   }
   header .bottom .gnb > li:nth-child(1) .gnb_content .inner .tab_menu li .tab_content div a.title.active::after, header .bottom .gnb > li:nth-child(2) .gnb_content .inner .tab_menu li .tab_content div a.title.active::after {
@@ -241,5 +243,35 @@ body {
   section.new {
     margin-top: 0;
     /* Mixins 안에 mediaQuery로 반응형 하였음. */
+  }
+  /* ########## Section - Magazine ########## */
+  section.magazine .inner .magazine_slider_outer .title {
+    font-weight: 700;
+  }
+  /* ########## Section - Insta ########## */
+  section.insta .items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  section.insta .items .thum:nth-child(2) {
+    grid-area: 2 span/2 span;
+  }
+  section.insta .items .thum.hash_tag {
+    grid-area: 2 span/2 span;
+  }
+  section.insta .items .thum.hash_tag a {
+    padding: 0;
+  }
+  section.insta .items .thum.hash_tag a .insta_icon {
+    width: 50px;
+    height: 50px;
+  }
+  section.insta .items .thum.hash_tag a .desc b {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2em;
+  }
+  section.insta .items .thum.hash_tag a .desc span {
+    font-size: 18px;
   }
 }
